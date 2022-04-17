@@ -6,7 +6,7 @@ const Header = () => {
         <div>
            <CustomLink to="/">HOME</CustomLink>
            <CustomLink to="/">HOME</CustomLink>
-           <CustomLink to="/">HOME</CustomLink>
+           
            <CustomLink to="/">Blogs</CustomLink>
         </div>
     );
