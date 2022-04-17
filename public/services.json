@@ -1,0 +1,20 @@
+[
+    {
+        "_id": "111",
+        "service": "Service one",
+        "details": "I have had this laptop only a day, but so far I think it is super. It replaces a 4 year old XPS 13. The Gram is light years ahead of it in terms of speed. No comparison. I love the fingerprint reader also.",
+        "img": "https://img.freepik.com/free-photo/bride-blue-dress-walk-along-ocean-shore_419896-4320.jpg?w=740"
+    },
+    {
+        "_id": "112",
+        "service": "Service Two",
+        "details": "This is a great Chromebook for a middle to highschooler. It has a real long battery life charges quickly, and maintains a strong wireless signal. The touchscreen is very responsive and we haven’t had any problems with it at all. It has a very comfortable keyboard.",
+        "img": "https://img.freepik.com/free-photo/young-muslim-bride-groom-wedding-photos_181624-36526.jpg?t=st=1650227712~exp=1650228312~hmac=5b707c59bf1f388550b2febabb5b3a5ddfd62d05108c9309eff1d3fdeef6ba84&w=740"
+    },
+    {
+        "_id": "113",
+        "service": "Service three",
+        "details": "I really like this model because it’s super-light and durable. It has very long battery life so I’m taking this laptop to every where. Definitely recommend to everyone",
+        "img": "https://img.freepik.com/free-photo/couple-photo-shoot-wedding-day_7502-4935.jpg?t=st=1650227712~exp=1650228312~hmac=a1487bb65055895b52c83986c5c5e3757b3cab9170c519b4420dca653204c651&w=740"
+    }
+]

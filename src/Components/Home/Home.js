@@ -1,6 +1,10 @@
+
 import React from 'react';
+import useData from '../../hooks/useData';
+import Services from '../Services/Services';
 
 const Home = () => {
+    const [userData, setUserData] = useData();
     return (
         <div>
             <h1 className='text-3xl md:text-7xl text-center pt-3'>wedding ring photos</h1>
@@ -9,6 +13,14 @@ const Home = () => {
             </div>
             <div>
                <h2 className='text-3xl text-center'>Services</h2>
+               <div className='md:grid grid-cols-3 gap-10 mx-20 mt-16'>
+                    {
+                        userData.slice(0, 3).map(data => <Services
+                            key={data._id}
+                            data={data}
+                        ></Services>)
+                    }
+                </div>
             </div>
         </div>
     );
