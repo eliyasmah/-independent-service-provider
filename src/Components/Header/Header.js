@@ -18,7 +18,7 @@ const Header = () => {
            <CustomLink to="/about-me">About Me</CustomLink>
            {
                 user ?
-                <button className='btn btn-link text-white text-decoration-none' onClick={handleSignOut}>sign out</button>
+                <button className='btn btn-link text-white text-decoration-none fs-4 m-0 p-0 bg-primary' onClick={handleSignOut}>sign out</button>
             :
                <CustomLink to="/login">Login</CustomLink>
            }
