@@ -1,7 +1,10 @@
 import React from 'react';
 import { useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { Navigate, useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../firebase.init';
+import Loading from '../Loading/Loading';
 
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
@@ -9,8 +12,12 @@ const SocialLogin = () => {
 
     let errorElement;
 
+    if(loading){
+        return <Loading></Loading>
+    }
+
     if(error){
-        alert(error);
+        toast(error);
     }
     if(user){
         navigate('/home');

@@ -1,9 +1,12 @@
-import { async } from '@firebase/util';
+
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { toast, ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../firebase.init';
+import Loading from '../Loading/Loading';
 import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Login = () => {
@@ -24,12 +27,16 @@ const Login = () => {
 
       const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
+      if(loading){
+        return <Loading></Loading>
+    }
+
       if(user){
         navigate(from, { replace: true });
       }
 
       if (error) {
-        alert(error);
+        toast(error);
     }
 
     const handleSubmit = event => {
@@ -45,8 +52,13 @@ const Login = () => {
 
     const resetPassword = async() =>{
         const email = emailRef.current.value;
-        await sendPasswordResetEmail(email);
-          alert('Sent email');
+        if(email){
+            await sendPasswordResetEmail(email);
+            toast('Sent email');
+        }
+        else{
+            toast('Please enter your email')
+        }
     }
     return (
         <div className='container w-50 mx-auto'>
@@ -65,8 +77,9 @@ const Login = () => {
         </Form>
         {errorElement}
         <p>New Member? <Link to="/register" className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link> </p>
-        <p><Link to="/register" className='text-primary pe-auto text-decoration-none' onClick={resetPassword}>Forget Password? </Link> </p>
+        <p><button className='btn btn-link text-primary pe-auto text-decoration-none' onClick={resetPassword}>Forget Password? </button> </p>
         <SocialLogin></SocialLogin>
+        <ToastContainer />
     </div>
     );
 };

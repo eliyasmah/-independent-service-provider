@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import { useCreateUserWithEmailAndPassword, useUpdateProfile } from 'react-firebase-hooks/auth';
 import './Register.css';
 import auth from '../../firebase.init';
-import { async } from '@firebase/util';
+import Loading from '../Loading/Loading';
 
 const Register = () => {
     const [agree, setAgree] = useState(false);
@@ -20,6 +20,9 @@ const Register = () => {
         navigate('/login');
     }
 
+    if(loading){
+        return <Loading></Loading>
+    }
 
     const handleRegister =async (event) => {
         event.preventDefault();
@@ -29,7 +32,6 @@ const Register = () => {
 
         await createUserWithEmailAndPassword(email, password);
         await updateProfile({ displayName : name});
-        alert('Updated profile');
         navigate('/home');
             
     }
