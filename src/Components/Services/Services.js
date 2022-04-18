@@ -1,8 +1,15 @@
 import React from 'react';
 import { Card, CardGroup,} from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 
 const Services = (props) => {
-    const { img, service,details} = props.data;
+    const {id, img, service, details} = props.data;
+
+    const navigate = useNavigate();
+
+    const navigateToServiceDetail = id =>{
+        navigate('/login');
+    }
     return (
 
 <div>
@@ -16,7 +23,7 @@ const Services = (props) => {
             {details}
         </Card.Text>
         </Card.Body>
-        <button className='btn-primary w-100 py-2 rounded '>Book</button>
+        <button onClick={() => navigateToServiceDetail(id)} className='btn-primary w-100 py-2 rounded '>Booking</button>
     </Card>
     </CardGroup>
  </div>
