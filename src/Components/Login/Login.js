@@ -3,6 +3,7 @@ import { Button, Form } from 'react-bootstrap';
 import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
+import SocialLogin from '../SocialLogin/SocialLogin';
 
 const Login = () => {
     const emailRef = useRef('');
@@ -11,6 +12,7 @@ const Login = () => {
     const location = useLocation();
 
     let from = location.state?.from?.pathname || "/";
+    let errorElement;
 
     const [
         signInWithEmailAndPassword,
@@ -22,6 +24,10 @@ const Login = () => {
       if(user){
         navigate(from, { replace: true });
       }
+
+      if (error) {
+        errorElement = <p className='text-danger'>Error: {error?.message}</p>
+    }
 
     const handleSubmit = event => {
       event.preventDefault();
@@ -38,11 +44,7 @@ const Login = () => {
         <h2 className='text-primary text-center mt-4'>Please Login</h2>
         <Form onSubmit={handleSubmit}>
             <Form.Group className="mb-3" controlId="formBasicEmail">
-                <Form.Label>Email address</Form.Label>
                 <Form.Control ref={emailRef} type="email" placeholder="Enter email" required />
-                <Form.Text className="text-muted">
-                    We'll never share your email with anyone else.
-                </Form.Text>
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
@@ -56,7 +58,9 @@ const Login = () => {
                Login
             </Button>
         </Form>
+        {errorElement}
         <p>New Member? <Link to="/register" className='text-danger pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link> </p>
+        <SocialLogin></SocialLogin>
     </div>
     );
 };
