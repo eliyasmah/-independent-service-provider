@@ -1,0 +1,8 @@
+.banner{
+    background-color: rgba(236, 231, 231, 0.651);
+}
+.bar{
+    width: 200px;
+  border-top: 3px solid rgb(31, 31, 197);
+  margin: 0 auto;
+}
