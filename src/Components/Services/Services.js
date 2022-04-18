@@ -1,14 +1,26 @@
 import React from 'react';
+import { Card, CardGroup,} from 'react-bootstrap';
 
 const Services = (props) => {
     const { img, service,details} = props.data;
     return (
-        <div className='bg-slate-100 p-5'>
-            <img className=' rounded m-auto' src={img} alt=" " />
-            <h1 className='text-xl text-center py-3 text-slate-600'>{service}</h1>
-            <p>{details}</p>
-            <button className='bg-slate-500 py-3 text-center rounded-md text-white'>Book</button>
-        </div>
+
+<div>
+ <div className='card'>
+ <CardGroup>
+    <Card>
+        <Card.Img variant="top" src={img} />
+        <Card.Body>
+        <Card.Title>{service}</Card.Title>
+        <Card.Text>
+            {details}
+        </Card.Text>
+        </Card.Body>
+        <button className='btn-primary w-100 py-2 rounded '>Book</button>
+    </Card>
+    </CardGroup>
+ </div>
+</div>
     );
 };
 

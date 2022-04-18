@@ -4,10 +4,11 @@ import CustomLink from '../CustomeLink/CustomeLink';
 const Header = () => {
     return (
         <div>
-            <div className='text-xl flex gap-4 justify-center text-center bg-slate-300 py-5'>
-           <CustomLink to="/">Home</CustomLink>
+            <div className='d-flex justify-content-center p-3 fs-4 text-decoration-none bg-dark gap-4'>
+           <CustomLink to="/home">Home</CustomLink>
            <CustomLink to="/blogs">Blogs</CustomLink>
            <CustomLink to="/about-me">About Me</CustomLink>
+           <CustomLink to="/login">Login</CustomLink>
         </div>
         </div>
     );
