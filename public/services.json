@@ -1,20 +1,23 @@
 [
     {
         "_id": "111",
-        "service": "Service one",
-        "details": "I have had this laptop only a day, but so far I think it is super. It replaces a 4 year old XPS 13. The Gram is light years ahead of it in terms of speed. No comparison. I love the fingerprint reader also.",
-        "img": "https://img.freepik.com/free-photo/bride-blue-dress-walk-along-ocean-shore_419896-4320.jpg?w=740"
+        "service": "product photography",
+        "price": "Price: 5000 BDT",
+        "details": "Product photography refers to using specific photography techniques to take accurate and attractive photos of your products. Your product photos influence shoppers' purchasing decisions, which can increase conversion rates and sales for your business.",
+        "img": "https://img.freepik.com/free-photo/front-view-delicious-meat-cheeseburgers-with-tomatoes-french-fries-dark_140725-153834.jpg?t=st=1650313829~exp=1650314429~hmac=570b2c8cf89ac26bf4d7029c407349d44622e77e5538320c7a8caa28f354d764&w=740"
     },
     {
         "_id": "112",
-        "service": "Service Two",
-        "details": "This is a great Chromebook for a middle to highschooler. It has a real long battery life charges quickly, and maintains a strong wireless signal. The touchscreen is very responsive and we haven’t had any problems with it at all. It has a very comfortable keyboard.",
-        "img": "https://img.freepik.com/free-photo/young-muslim-bride-groom-wedding-photos_181624-36526.jpg?t=st=1650227712~exp=1650228312~hmac=5b707c59bf1f388550b2febabb5b3a5ddfd62d05108c9309eff1d3fdeef6ba84&w=740"
+        "service": "Modeling photography",
+        "price": "Price: 7500 BDT",
+        "details": "Model photography shoots are generally used in the fashion industry, whereby a model poses for a photographer either at a studio or in a specific shoot location. Although model photography shoots tend to refer to an actual model posing for the camera, it can also signify a photographer.",
+        "img": "https://img.freepik.com/free-photo/beauty-blond-woman-chair_155003-474.jpg?t=st=1650313905~exp=1650314505~hmac=9d71258f9e120944ae986197be4e09c5298e46e6547a006e5e8b6b0795aead61&w=740"
     },
     {
         "_id": "113",
-        "service": "Service three",
-        "details": "I really like this model because it’s super-light and durable. It has very long battery life so I’m taking this laptop to every where. Definitely recommend to everyone",
+        "service": "Wedding photographer",
+        "price": "Price: 10000 BDT",
+        "details": "A wedding photographer generally captures memorable moments and details on the wedding day to create a fabulous album of memories. This includes capturing the big moments like when partners first see each other, exchanging vows or rings, and during the ceremony.",
         "img": "https://img.freepik.com/free-photo/couple-photo-shoot-wedding-day_7502-4935.jpg?t=st=1650227712~exp=1650228312~hmac=a1487bb65055895b52c83986c5c5e3757b3cab9170c519b4420dca653204c651&w=740"
     }
 ]

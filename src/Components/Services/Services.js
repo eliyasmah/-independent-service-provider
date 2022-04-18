@@ -3,7 +3,7 @@ import { Card, CardGroup,} from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
 const Services = (props) => {
-    const {id, img, service, details} = props.data;
+    const {id, img, service, details, price} = props.data;
 
     const navigate = useNavigate();
 
@@ -19,6 +19,7 @@ const Services = (props) => {
         <Card.Img variant="top" src={img} />
         <Card.Body>
         <Card.Title>{service}</Card.Title>
+        <Card.Title>{price}</Card.Title>
         <Card.Text>
             {details}
         </Card.Text>
