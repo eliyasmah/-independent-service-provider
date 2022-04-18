@@ -1,6 +1,7 @@
+import { async } from '@firebase/util';
 import React, { useRef } from 'react';
 import { Button, Form } from 'react-bootstrap';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSendPasswordResetEmail, useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 import auth from '../../firebase.init';
 import SocialLogin from '../SocialLogin/SocialLogin';
@@ -21,12 +22,14 @@ const Login = () => {
         error,
       ] = useSignInWithEmailAndPassword(auth);
 
+      const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
+
       if(user){
         navigate(from, { replace: true });
       }
 
       if (error) {
-        errorElement = <p className='text-danger'>Error: {error?.message}</p>
+        alert(error);
     }
 
     const handleSubmit = event => {
@@ -39,6 +42,12 @@ const Login = () => {
     const navigateRegister = event => {
         navigate('/register');
     }
+
+    const resetPassword = async() =>{
+        const email = emailRef.current.value;
+        await sendPasswordResetEmail(email);
+          alert('Sent email');
+    }
     return (
         <div className='container w-50 mx-auto'>
         <h2 className='text-primary text-center mt-4'>Please Login</h2>
@@ -48,18 +57,15 @@ const Login = () => {
             </Form.Group>
 
             <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Form.Label>Password</Form.Label>
                 <Form.Control ref={passwordRef} type="password" placeholder="Password" required />
             </Form.Group>
-            <Form.Group className="mb-3" controlId="formBasicCheckbox">
-                <Form.Check type="checkbox" label="Check me out" />
-            </Form.Group>
-            <Button variant="primary" type="submit">
+            <Button className="primary w-100 d-block py-2 mb-3" type="submit">
                Login
             </Button>
         </Form>
         {errorElement}
-        <p>New Member? <Link to="/register" className='text-danger pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link> </p>
+        <p>New Member? <Link to="/register" className='text-primary pe-auto text-decoration-none' onClick={navigateRegister}>Please Register</Link> </p>
+        <p><Link to="/register" className='text-primary pe-auto text-decoration-none' onClick={resetPassword}>Forget Password? </Link> </p>
         <SocialLogin></SocialLogin>
     </div>
     );
