@@ -1,0 +1,11 @@
+
+.about-me{
+    text-align: center;
+    margin-top: 50px;
+}
+.aboutme-img img{
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    
+}
