@@ -24,7 +24,7 @@ const Services = (props) => {
             {details}
         </Card.Text>
         </Card.Body>
-        <button onClick={() => navigateToServiceDetail(id)} className='btn-primary w-100 py-2 rounded '>Booking</button>
+        <button onClick={() => navigateToServiceDetail(id)} className='btn-primary w-100 py-2 rounded '>Book Now</button>
     </Card>
     </CardGroup>
  </div>
