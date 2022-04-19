@@ -8,7 +8,7 @@ const Services = (props) => {
     const navigate = useNavigate();
 
     const navigateToServiceDetail = id =>{
-        navigate('/login');
+        navigate('/checkout');
     }
     return (
 
