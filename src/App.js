@@ -7,7 +7,6 @@ import Footer from './Components/Footer/Footer';
 import Header from './Components/Header/Header';
 import Home from './Components/Home/Home';
 import NotFound from './Components/NotFound/NotFound';
-import 'bootstrap/dist/css/bootstrap.min.css';
 import Login from './Components/Login/Login';
 import Register from './Components/Register/Register';
 

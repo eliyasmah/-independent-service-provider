@@ -13,7 +13,7 @@ const Home = () => {
                 <h1 className='text-primary text-center m-5 '>Single Flash Photography</h1>
                 </div>
                 <div className='text-center '>
-                    <img className='rounded' src="https://img.freepik.com/free-photo/photography-man_101299-4.jpg?w=740" alt="" />
+                    <img className='rounded img-fluid' src="https://img.freepik.com/free-photo/photography-man_101299-4.jpg?w=740" alt="" />
                 </div>
             </div>
             <div>

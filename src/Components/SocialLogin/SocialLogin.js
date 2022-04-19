@@ -5,6 +5,7 @@ import { toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import auth from '../../firebase.init';
 import Loading from '../Loading/Loading';
+import google from '../../images/google.png';
 
 const SocialLogin = () => {
     const [signInWithGoogle, user, loading, error] = useSignInWithGoogle(auth);
@@ -34,7 +35,7 @@ const SocialLogin = () => {
                 <button
                     onClick={() => signInWithGoogle()}
                     className='btn btn-info w-50 d-block mx-auto my-2'>
-                    <img style={{ width: '30px' }} src='https://raw.githubusercontent.com/ProgrammingHero1/genius-car-service-direction-module-62/main/src/images/social/google.png' alt="" />
+                    <img style={{ width: '30px' }} src={google} alt="" />
                         <span className='px-2'>Google Sign In</span>
                     </button>
             </div>
