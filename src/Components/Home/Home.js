@@ -10,7 +10,8 @@ const Home = () => {
         <div className='banner'>
             <div className='d-md-flex flex-row justify-content-evenly p-5'>
                 <div>
-                <h1 className='text-primary text-center m-5 '>Single Flash Photography</h1>
+                <h1 className='text-primary text-center mt-5 '>Single Flash Photography</h1>
+                <h4 className='text-center m-3'>“A good snapshot keeps a moment from running away.”</h4>
                 </div>
                 <div className='text-center '>
                     <img className='rounded img-fluid' src="https://img.freepik.com/free-photo/photography-man_101299-4.jpg?w=740" alt="" />
