@@ -4,8 +4,8 @@ https://provides-services.web.app/
 
 ## Project Details
 
-* Project name:Single Flash Photography\
-* Technology:HTML-5,CSS-3,React-bootstrap,React.js\
+* Project name:Single Flash Photography
+* Technology:HTML-5,CSS-3,React-bootstrap,React.js
 
 * Total 5 section:
     * Home section
